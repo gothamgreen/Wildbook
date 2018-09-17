@@ -178,6 +178,8 @@ public final class NotificationMailer implements Runnable {
    * @param map map of search/replace strings for email template (if order is important, supply {@code LinkedHashMap}
    */
   public NotificationMailer(String context, String langCode, Collection<String> to, List<String> types, Map<String, String> map) {
+      System.out.println("I am Darya and I hit the NotificationMailer constructor");
+      
     Objects.requireNonNull(context);
     Objects.requireNonNull(to);
     for (String s : to) {
@@ -257,6 +259,7 @@ public final class NotificationMailer implements Runnable {
    */
   public NotificationMailer(String context, String langCode, Collection<String> to, String type, Map<String, String> map) {
     this(context, langCode, to, Arrays.asList(type), map);
+      System.out.println("I am Darya and I hit the NotificationMailer constructor 2");
   }
 
   /**
@@ -270,6 +273,7 @@ public final class NotificationMailer implements Runnable {
    */
   public NotificationMailer(String context, String langCode, String to, List<String> types, Map<String, String> map) {
     this(context, langCode, Arrays.asList(to), types, map);
+      System.out.println("I am Darya and I hit the NotificationMailer constructor 3");
   }
 
   /**
@@ -283,6 +287,7 @@ public final class NotificationMailer implements Runnable {
    */
   public NotificationMailer(String context, String langCode, String to, String type, Map<String, String> map) {
     this(context, langCode, Arrays.asList(to), type, map);
+      System.out.println("I am Darya and I hit the NotificationMailer constructor 4");
   }
 
   /**
@@ -300,6 +305,7 @@ public final class NotificationMailer implements Runnable {
     this(context, langCode, to, type, new HashMap<String, String>(){{ put(STANDARD_CONTENT_TAG, text);
       System.out.println("NoteMailerHere1");
     }});
+      System.out.println("I am Darya and I hit the NotificationMailer constructor 5");
   }
 
   /**
@@ -316,6 +322,7 @@ public final class NotificationMailer implements Runnable {
    */
   public NotificationMailer(String context, String langCode, String to, String type, final String text) {
     this(context, langCode, Arrays.asList(to), type, text);
+      System.out.println("I am Darya and I hit the NotificationMailer constructor 6");
   }
 
   /**
