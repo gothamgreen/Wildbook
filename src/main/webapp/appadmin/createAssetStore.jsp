@@ -48,7 +48,8 @@ myShepherd.getPM().makePersistent(as);
 
 
 //////////////// begin local //////////////
-LocalAssetStore as = new LocalAssetStore("example Local AssetStore", new File("/var/lib/tomcat7/some/path").toPath(), "http://example.com/path", true);
+System.error.println("ABOUT TO /var/lib/ \n\n\n");
+LocalAssetStore as = new LocalAssetStore("example Local AssetStore", new File("/workspace/apache-tomcat-9.0.11/webapps/wildbook_data_dir/").toPath(), "http://example.com/path", true);
 myShepherd.getPM().makePersistent(as);
 //////////////// end local //////////////
 

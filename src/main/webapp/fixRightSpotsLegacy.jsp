@@ -22,7 +22,8 @@ Shepherd myShepherd = new Shepherd("context0");
 String rootDir = getServletContext().getRealPath("/");
 String baseDir = ServletUtilities.dataDir("context0", rootDir);
 
-baseDir = "/var/lib/tomcat7/webapps/wildbook_data_dir";
+System.error.println("ABOUT TO /var/lib/ \n\n\n");
+baseDir = "/workspace/apache-tomcat-9.0.11/webapps/wildbook_data_dir";
 
 myShepherd.beginDBTransaction();
 

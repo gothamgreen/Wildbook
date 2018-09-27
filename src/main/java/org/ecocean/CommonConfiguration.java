@@ -674,13 +674,15 @@ public class CommonConfiguration {
   public static String getDataDirectoryName(String context) {
     initialize(context);
     String dataDirectoryName="shepherd_data_dir";
+    System.err.println("getDataDirectoryName: dataDirectoryName=" + dataDirectoryName);
     
     //new context code here
     
     //if(props.getProperty("dataDirectoryName")!=null){return props.getProperty("dataDirectoryName").trim();}
     
     if((ContextConfiguration.getDataDirForContext(context)!=null)&&(!ContextConfiguration.getDataDirForContext(context).trim().equals(""))){dataDirectoryName=ContextConfiguration.getDataDirForContext(context);}
-    
+    System.err.println("getDataDirectoryName: dataDirectoryName=" + dataDirectoryName);
+
     return dataDirectoryName;
   }
   

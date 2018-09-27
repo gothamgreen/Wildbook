@@ -389,7 +389,8 @@ System.out.println(ael.getAttribute("attributeKey") + " -> " + aval);
       secs.append(String.valueOf(tp.getDateTimeInSeconds())).append(" ");
     }
 
-    return ("python3 /var/lib/tomcat7/webapps/wildbook/config/occurrence_blackbox.py "+lats.toString()+lons.toString()+secs.toString());
+    System.err.println("ABOUT TO /var/lib/ \n\n\n");
+    return ("python3 /workspace/apache-tomcat-9.0.11/webapps/wildbook-7.0.0-EXPERIMENTAL/config/occurrence_blackbox.py "+lats.toString()+lons.toString()+secs.toString());
 
   }
 
